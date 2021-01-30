@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <form action="{% url 'sekolah/add' %}" method="POST">
+        {{ csrf_token }}
+        <label for="nama_sekolah">Nama :</label>
+        <input type="text" name="nama_sekolah" id="nama_sekolah">
+        <label for="npsn">Nama :</label>
+        <input type="text" name="npsn" id="npsn">
+        <label for="alamat">Alamat :</label>
+        <textarea placeholder="alamat" name="alamat" id="alamat" cols="30" rows="10"></textarea>
+        <label for="logo">Nama :</label>
+        <input type="text" name="logo" id="logo">
+        <label for="level">Nama :</label>
+        <input type="text" name="level" id="level">
+        <label for="status">Nama :</label>
+        <input type="text" name="status" id="status">
+        <button type="submit" class="btn btn-primary">Add</button>
+    </form>
+{% endblock %}
